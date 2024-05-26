@@ -1,0 +1,158 @@
+/* Define colors for consistency */
+:root {
+  --primary-color: #7986cb;
+  --primary-dark: #5c6bc0;
+  --secondary-color: #3f51b5;
+  --secondary-light: #c5cae9;
+  --text-color: #333;
+  --background-color: #fff;
+  --shadow-color: rgba(0, 0, 0, 0.1);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--primary-color);
+  font-family: "Arial", sans-serif;
+  color: var(--text-color);
+}
+
+.container {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+}
+
+.wrapper-div {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--background-color);
+  width: 50vw;
+  max-width: 600px;
+  padding: 30px 40px;
+  border-radius: 15px;
+  box-shadow: 0 6px 12px var(--shadow-color);
+}
+
+@media (max-width: 768px) {
+  .wrapper-div {
+    width: 80vw;
+  }
+}
+
+@media (max-width: 480px) {
+  .wrapper-div {
+    width: 90vw;
+    padding: 20px;
+  }
+}
+
+.search-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+#words {
+  font-size: 1.5rem;
+  padding: 10px 20px;
+  width: 70%;
+  border: 2px solid var(--secondary-light);
+  border-radius: 10px;
+  outline: none;
+}
+
+.btn {
+  font-size: 1.5rem;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 10px;
+  background-color: var(--secondary-color);
+  color: var(--background-color);
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.btn:hover {
+  background-color: var(--primary-dark);
+  transform: translateY(-2px);
+}
+
+.answer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.word-sound {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 15px;
+}
+
+.actual-word {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--secondary-color);
+}
+
+.sound-btn {
+  font-size: 1.2rem;
+  padding: 10px 20px;
+  border: none;
+  background-color: var(--secondary-color);
+  color: var(--background-color);
+  cursor: pointer;
+  border-radius: 10px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.sound-btn:hover {
+  background-color: var(--primary-dark);
+  transform: translateY(-2px);
+}
+
+.meaning {
+  font-size: 1.3rem;
+  color: var(--text-color);
+  padding: 0 20px;
+}
+
+@media (max-width: 480px) {
+  #words {
+    width: 60%;
+    font-size: 1.2rem;
+  }
+
+  .btn {
+    font-size: 1.2rem;
+    padding: 10px 15px;
+  }
+
+  .actual-word {
+    font-size: 1.5rem;
+  }
+
+  .sound-btn {
+    font-size: 1rem;
+    padding: 8px 15px;
+  }
+
+  .meaning {
+    font-size: 1rem;
+  }
+}
