@@ -12,12 +12,17 @@ btn.addEventListener("click", () => {
     })
     .then((data) => {
       console.log(data);
-
-      actualWord.innerHTML = data[0].word;
-      meaning.innerHTML = data[0].meanings[0].definitions[0].definition;
+      console.log(data[0]);
+      if (data[0]) {
+        actualWord.innerHTML = data[0].word;
+        meaning.innerHTML = data[0].meanings[0].definitions[0].definition;
+      } else {
+        actualWord.innerHTML = "Sorry!";
+        meaning.innerHTML = data.message;
+      }
     })
     .catch((error) => {
-      console.log("ERROR: ", error);
+      meaning.innerHTML = "Sorry word not available!";
     });
 });
 
